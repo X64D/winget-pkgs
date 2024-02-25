@@ -1,0 +1,129 @@
+PackageIdentifier: HeroicGamesLauncher.HeroicGamesLauncher
+PackageVersion: 2.13.0
+PackageLocale: en-US
+Publisher: Heroic Games Launcher
+PublisherUrl: https://heroicgameslauncher.com/
+PublisherSupportUrl: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/issues
+Author: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/graphs/contributors
+PackageName: Heroic
+PackageUrl: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher
+License: GPL-3.0
+LicenseUrl: https://raw.githubusercontent.com/Heroic-Games-Launcher/HeroicGamesLauncher/main/COPYING
+ShortDescription: Heroic is a Free and Open Source Epic, GOG and Amazon Prime Games launcher for Linux, Windows and macOS.
+Description: |-
+  Heroic Games Launcher, or simply "Heroic", is a native GUI alternative to the Epic Games Launcher (EGL) for Linux, Windows and MacOS.
+  It is open source under GPLv3 and is maintained by a community of developers that work for free on their free time.
+  Currently, Heroic supports Epic games (through Legendary, a CLI tool that deals with authentication, downloading, and launching Epic Games) and GOG games (through GOGdl, a CLI tool that deals with authentication, downloading, and launching GOG games).
+  Support to add your own games (think Steam's "Add Non-Steam Game" feature) is also available.
+Moniker: heroic
+Tags:
+- epic-games
+- games-launcher
+- gaming
+- gog-galaxy
+- launcher
+ReleaseNotes: |-
+  HI!
+
+  The day has come for a new Heroic release and here we are, with one of the biggest in recent times.
+  This new release brings tons of new features and improvements for GOG games which makes it more feature-complete than ever!
+
+  We also started a partnership with GOG and now every game you buy from the GOG store inside Heroic will give us a commission, so it is another way of supporting the project. :)
+  The link is also available at https://heroicgameslauncher.com/donate if you prefer to purchase games in your web browser.
+
+  GOG Changes
+
+  - Reworked downloading module
+  - Ability to install and uninstall DLCs at any point (Windows and Mac builds) *
+  - Ability to change game language at any point (Windows and Mac builds) *
+  - Xdelta-based patching support for Windows and Mac builds *
+  - Automatic installation of game dependencies as long as they are provided by GOG (Windows builds) *
+  - New implementation of install script interpreter
+  - Faster way of downloading and updating Linux native games *
+  - Beta channels support for Windows and Mac builds (it's now possible to access Metro Exodus: Enhanced Edition) *
+  - Support for password-protected beta channels (potentially useful for game devs who want to try out GOG build in Heroic)
+  - Version rollback for Windows and Mac builds *
+  - Ability to view changelogs on the game page
+  - REDMod integration for Cyberpunk 2077
+
+  (*) Works on Linux when installing Windows games, but not for Linux builds since it is not supported by GOG.
+
+  General Changes
+
+  - Added a message on the library when no games were found due to filters applied or not logged in on any stores
+  - Improved the Wine settings install dialog for Windows games on Linux and macOS
+  - Winetricks fixes are enabled by default now
+  - Added Wine/Proton explanation on Wine Manager
+  - Several UI/UX and performance improvements
+
+  Fixes
+
+  - Fix the width of the image in the Add Game dialog
+  - [Windows] Fix playtime tracking and auto cloud save-sync
+  - Pass `--skip-sdl` when updating/repairing Epic games
+  - Several other small fixes
+  - Prevent double input when using a controller on the SteamDeck
+  - Fix some cases where the install dialog got stuck fetching the install size
+
+  Changelog
+
+  - [UI] Fix width of image in Add Game dialog by @arielj in #3427
+  - Added the second AMD APU code value to Steam Deck detection by @m3e-g in #3434
+  - [Fix] Don't disable controller when disabling logs by @arielj in #3457
+  - [Fix] Wait for legendary refresh to finish before storing array by @arielj in #3452
+  - [UX] Set the auto fixes feature ON by default by @arielj in #3449
+  - [UX] Add info about what Reset Heroic and Clear Heroic Cache do by @arielj in #3431
+  - [UI/FIX] Fix context menu font by @Etaash-mathamsetty in #3409
+  - [UX] Prefer using release dates from each runner by @imLinguin in #3446
+  - [i18n] Updated Translations by @weblate in #3422
+  - [UI] Nord Light theme fixes by @arielj in #3462
+  - [GOG]: Refactor almost all GOG components by @imLinguin in #3020
+  - [Cleanup] `platform` checks. Remove old code. by @arielj in #3477
+  - [Refactor] Download known fixes from store folder by @arielj in #3475
+  - [UX] Add some copy in the Wine manager explaining what are the different Wines in linux by @arielj in #3456
+  - [Fix] Prevent last run output to leak to next run's logs by @arielj in #3454
+  - [UX] Add support for autoinstallation of files from game folder by @arielj in #3448
+  - [UX] Allow going back to a previous screen when no more webview history by @arielj in #3426
+  - [Fix] Game Status type by @CommandMC in #3481
+  - [Fix] Caching in `downloadFile` by @CommandMC in #3484
+  - [Fix] Filter out -LoL build when installing wine at boot by @arielj in #3512
+  - General repo cleanup by @CommandMC in #3420
+  - [i18n] Updated Translations by @weblate in #3506
+  - [Fix/UX] Disable dragging elements by @arielj in #3514
+  - [Fix] Ensure manifest in install info by @arielj in #3508
+  - [Fix/Refactor] Make all logs async by @arielj in #3507
+  - [Fix] Fix calculation of appName from command parts by @arielj in #3522
+  - [UX] Initial refresh in the background if any library is ready by @arielj in #3526
+  - [FIX] Reload library after GOG game install by @arielj in #3520
+  - [Fix] Only download Winetricks every 7 days by @CommandMC in #3527
+  - [FIX] Use PowerShell to run callRunner` commands on Windows by @CommandMC in #3006
+  - [Tech]: Update nile by @imLinguin in #3525
+  - [Ref] Use DNS text queries to resolve PCI IDs by @CommandMC in #3528
+  - [UX] Update order in library when an install starts by @arielj in #3523
+  - [PROTON] use run verb for setup commands by @imLinguin in #3505
+  - [FIX] set initial state properly for password modal by @imLinguin in #3482
+  - [Fix/UX] Check config before calling autoupdater by @arielj in #3530
+  - [Fix] Pass `--skip-sdl` when updating/repairing Epic games by @CommandMC in #3535
+  - [Fix] ignore gamepads that are masked by steam input to prevent dublicated inputs by @bmsuseluda in #3470
+  - [Fix] Some default settings not being applied by @Etaash-mathamsetty in #3543
+  - Small Formatting Changes by @bukaj0 in #3542
+  - Tech: gogdl update by @imLinguin in #3541
+  - [GOG] trim titles for games by @imLinguin in #3549
+  - [UX] Add messages when there are no games to display in the library by @arielj in #3536
+  - [FIX] Apply top padding only to external link warning dialog by @arielj in #3550
+  - [FIX] Fix z-index of folder icons in install dialog by @arielj in #3551
+  - [i18n] Updated Translations by @weblate in #3517
+  - [UX] Simplify install dialog hiding wine settings by default. Warn about shared wine directory by @arielj in #3547
+
+  New Contributors
+
+  - @m3e-g made their first contribution in #3434
+  - @bmsuseluda made their first contribution in #3470
+  - @bukaj0 made their first contribution in #3542
+ReleaseNotesUrl: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/tag/v2.13.0
+Icons:
+- IconUrl: https://raw.githubusercontent.com/Heroic-Games-Launcher/HeroicGamesLauncher/main/public/icon.png
+  IconFileType: png
+  IconTheme: default
+ManifestType: defaultLocale
+ManifestVersion: 1.7.0

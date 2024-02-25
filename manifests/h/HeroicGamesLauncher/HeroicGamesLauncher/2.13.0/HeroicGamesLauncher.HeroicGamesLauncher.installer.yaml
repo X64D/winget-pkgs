@@ -1,0 +1,22 @@
+PackageIdentifier: HeroicGamesLauncher.HeroicGamesLauncher
+PackageVersion: 2.13.0
+InstallerLocale: en-US
+Platform:
+- Windows.Desktop
+MinimumOSVersion: 10
+InstallModes:
+- silent
+UpgradeBehavior: install
+ReleaseDate: 2024-02-12
+Installers:
+- Architecture: x64
+  InstallerType: nullsoft
+  Scope: user
+  InstallerUrl: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.13.0/Heroic-2.13.0-Setup-x64.exe
+  InstallerSha256: BD8979B5C6F91D85AA39718499E5BD3826EB06AEC448EAF9A93BCEE24DCAA945
+- Architecture: x64
+  InstallerType: portable
+  InstallerUrl: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.13.0/Heroic-2.13.0-Portable-x64.exe
+  InstallerSha256: B64675FD138E8CCACF5CBA95102E4042AD761FC44E5F46AFF9CE1EBA70140D1A
+ManifestType: installer
+ManifestVersion: 1.7.0
